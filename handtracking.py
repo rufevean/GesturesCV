@@ -21,6 +21,7 @@ while True:
         for handLms in results.multi_hand_landmarks:
             for id, lm in enumerate(handLms.landmark):
                 h, w, c = img.shape
+                # Coordinates for each landmark detected in the hand capture
                 cx, cy, = int(lm.x *w), int(lm.y*h)
                 print(id, cx, cy)
 
